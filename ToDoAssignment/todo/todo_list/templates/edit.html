@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if item %}
+    <form class="form-inline my-2 my-lg-0" method="POST">
+        {% csrf_token %}
+        <input class="form-control mr-sm-2" type="text" placeholder="{{item.item}}" value="{{item.item}}" name="item" aria-label="Search">
+        <input class="form-control mr-sm-2" type="time" placeholder="{{item.from_time}}" name="from_time" value="{{item.from_time}}" aria-label="Search">
+        <input class="form-control mr-sm-2" type="time" placeholder="{{item.to_time}}" name="to_time" value="{{item.to_time}}" aria-label="Search">
+        <input type="hidden" value="{{item.completed}}" name="completed">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Edit list</button>
+    </form>
+    {% endif %}
+
+{% endblock %}
