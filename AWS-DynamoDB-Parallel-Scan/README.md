@@ -1,4 +1,4 @@
-#Parallel Scan DynamoDB
+# Parallel Scan DynamoDB
 
 
 Current Code is set to read 10 segments Parallelly
