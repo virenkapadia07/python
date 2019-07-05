@@ -12,8 +12,8 @@ HostInfo = namedtuple(field_names='cert hostname peername', typename='HostInfo')
 HOSTS = [
     'damjan.softver.org.mk'
     'expired.badssl.com',
-    'wrong.host.badssl.com',
-    'crm.staah.net'
+    'wrong.host.badssl.com'
+
 ]
 
 def get_certificate(hostname, port):
